@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Quiz</title>
+    <link rel="icon" type="image/x-icon" href="Images/icon.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/sports.png" alt="sports.png">
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="#">Home</a> </li>
+                <li> <a href="quiz.html">Quiz</a> </li>
+                <li> <a href="#">Gallery</a> </li>
+                <li> <a href="#">Shop</a> </li>
+                <li> <a href="#">Site Map</a> </li>
+                <li> <a href="#">Student Details</a> </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <video playsinline autoplay muted loop poster="Images/card.png" id="bg-video">
+        <source src="Videos/bg-video-2.mp4" type="video/mp4">
+    </video>
+    <hr>
+    <button class="start_btn">Start Quiz</button>
+    <div class="quiz_box">
+        <div class="timer1">
+            <div class="time_text">Time left</div>
+            <div>
+                <p id="timer_count"></p>
+            </div>
+        </div>
+
+        <div class="que">
+
+            <h3 id="question">question</h3>
+        </div>
+        <div class="options">
+            <div class="option1">
+                <p id="answer1">answer1</p>
+            </div>
+            <div class="option2">
+                <p id="answer2">answer2</p>
+            </div>
+            <div class="option3">
+                <p id="answer3">answer3</p>
+            </div>
+            <div class="option4">
+                <p id="answer4">answer4</p>
+            </div>
+        </div>
+
+        <div class="que_details">
+            <p id="final">1</p>
+            <p id="final2"> out of 10 Questions</p>
+            <button class="next_btn">NEXT</button>
+        </div>
+    </div>
+    <div class="result_box">
+        <p class="cong">Congratulations,<br> Quiz Completed!</p>
+        <p class="tot_que">Total Quistions : 10</p>
+        <div class="corr_ans">
+            <p id="score_det1">Correct answers : </p>
+            <p id="corr">0</p>
+        </div>
+        <div class="wrong_ans">
+            <p id="score_det2">Wrong answers : </p>
+            <p id="wrong">0</p>
+        </div>
+        <div class="score_show">
+            <p id="score_det3">Score : </p>
+            <p id="score">0</p>
+        </div>
+        <div id="time_taken">
+            <p id="score_det4">TIme Taken :
+            <p id="time_take">0</p>
+            <p id="sec"> S</p>
+        </div>
+
+        <p id="grade">Grade</p>
+        <button id="start_again">Start Again</button>
+
+    </div>
+
+    <footer>
+        <div class="footer" id="footerid">
+            <div class="row-smicons">
+                <ul>
+                    <li><a href="#">Follow Our Socials</a></li>
+                </ul>
+            </div>
+            <div class="row-smicons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </div>
+
+            <div class="row-smicons">
+                <ul>
+                    <li><a href="about_us.html">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Our Services</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Career</a></li>
+                </ul>
+            </div>
+
+            <div class="row-smicons">
+                SPORTS.TV Copyright © 2023 SportsTv - All rights reserved || Page Designed By: Hasala Abhilasha
+                Ekanayake
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header")
+            header.classList.toggle("sticky", window.scrollY)
+        })
+
+
+    </script>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
